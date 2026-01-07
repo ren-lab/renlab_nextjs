@@ -7,7 +7,7 @@ import remarkGfm from 'remark-gfm';
 
 // Posts directory - adjust path based on where Next.js is running from
 // If running from nextjs/ directory, go up one level to find _posts
-const postsDirectory = path.join(process.cwd(), '..', '_posts');
+const postsDirectory = path.join(process.cwd(), '_posts');
 
 /**
  * Recursively convert Date objects to strings in an object
