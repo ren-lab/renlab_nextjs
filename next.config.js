@@ -6,7 +6,7 @@ const nextConfig = {
     unoptimized: true,
   },
   // For static export, we need to disable image optimization
-  basePath: '/out',
+  // basePath: '/out',
   assetPrefix: '/out/',
 }
 
