@@ -122,9 +122,6 @@ function parseMarkdownFile(filePath: string): { data: any; content: string } {
   }
 }
 
-/**
- * Get all posts from a directory
- */
 export function getAllPosts(category: string): PostData[] {
   const categoryDir = path.join(postsDirectory, category);
   
@@ -142,12 +139,19 @@ export function getAllPosts(category: string): PostData[] {
       // Generate slug from filename
       const slug = fileName.replace(/\.md$/, '');
       
-      // Ensure date is a string (gray-matter might parse it as Date object)
-      const dateValue = data.date instanceof Date 
-        ? data.date.toISOString().split('T')[0] 
-        : data.date 
-          ? String(data.date) 
-          : '';
+      // Extract date from filename (YYYY-MM-DD at the start)
+      const dateMatch = fileName.match(/^(\d{4}-\d{2}-\d{2})/);
+      const fileDate = dateMatch ? dateMatch[1] : '';
+      
+      // Use frontmatter date if available, otherwise use filename date
+      let dateValue = '';
+      if (data.date) {
+        dateValue = data.date instanceof Date 
+          ? data.date.toISOString().split('T')[0] 
+          : String(data.date);
+      } else {
+        dateValue = fileDate;
+      }
       
       return {
         slug,
@@ -167,6 +171,8 @@ export function getAllPosts(category: string): PostData[] {
       return 0;
     });
   
+    console.log('Posts with dates:', allPostsData.map(p => ({ slug: p.slug, date: p.date })));
+
   return allPostsData;
 }
 

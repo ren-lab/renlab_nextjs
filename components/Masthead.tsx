@@ -21,7 +21,9 @@ export default function Masthead({ header }: MastheadProps) {
         <div className="row">
           <div className="small-12 columns">
             <Link id="logo" href="/" title={`${siteConfig.title} – ${siteConfig.slogan}`}>
-              <Image src={siteConfig.logo} alt={`${siteConfig.title} – ${siteConfig.slogan}`} />
+	      <div style={{ position: 'relative', width: '100%', height: '200px' }}>
+              <Image src={siteConfig.logo} alt={`${siteConfig.title} – ${siteConfig.slogan}`} fill />
+  	      </div>
             </Link>
           </div>
         </div>
