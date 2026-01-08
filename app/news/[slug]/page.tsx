@@ -43,7 +43,7 @@ export default async function NewsPostPage({ params }: PageProps) {
 
           {post.image && post.image.title && (
             <img
-              src={`/images/${post.image.title}`}
+              src={`images/${post.image.title}`}
               alt={post.image.title}
               style={{ maxWidth: '100%', height: 'auto', marginBottom: '1rem' }}
             />
