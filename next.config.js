@@ -6,8 +6,8 @@ const nextConfig = {
     unoptimized: true,
   },
   // For static export, we need to disable image optimization
-  basePath: '/out',
-  assetPrefix: '/out/',
+  basePath: process.env.NODE_ENV === 'production' ? '/out' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/out' : '',
 }
 
 module.exports = nextConfig

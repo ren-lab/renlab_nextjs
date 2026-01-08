@@ -21,7 +21,7 @@ export default function Masthead({ header }: MastheadProps) {
         <div className="row">
           <div className="small-12 columns">
             <Link id="logo" href="/" title={`${siteConfig.title} – ${siteConfig.slogan}`}>
-              <Image src={siteConfig.logo} alt={`${siteConfig.title} – ${siteConfig.slogan}`} />
+              <img src={siteConfig.logo} alt={`${siteConfig.title} – ${siteConfig.slogan}`} />
   	        </Link>
           </div>
         </div>
