@@ -39,7 +39,7 @@ export default async function NewsPage() {
                 
                 {post.image && post.image.thumb && (
                   <img
-                    src={`../images/${post.image.thumb}`}
+                    src={`/images/${post.image.thumb}`}
                     alt={post.image.title || post.title}
                     style={{ maxWidth: '300px', height: 'auto' }}
                   />
