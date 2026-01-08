@@ -93,7 +93,7 @@ export default function Masthead({ header }: MastheadProps) {
         <div id="masthead-with-pattern" style={{ background: `url('${header.pattern}')` }}>
           <div className="row">
             <figure className="small-12 columns">
-              <img src={header.pattern} alt={siteConfig.title} />
+              <Image src={header.pattern} alt={siteConfig.title} />
             </figure>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function Masthead({ header }: MastheadProps) {
         <div id="masthead-with-background-color" style={{ background: header.background_color }}>
           <div className="row">
             <figure className="small-12 columns">
-              <img src={header.pattern || ''} alt={siteConfig.title} />
+              <Image src={header.pattern || ''} alt={siteConfig.title} />
             </figure>
           </div>
         </div>
