@@ -19,7 +19,7 @@ export default function TeamPage() {
 
           <h2>Principle Investigator</h2>
           <br />
-          <Image src="images/team-bingren.jpg" alt="Bing Ren" />
+          <Image src="/images/team-bingren.jpg" alt="Bing Ren" />
           <p>
             <strong>
               <Link href="/bing/">Bing Ren, PhD.</Link>
