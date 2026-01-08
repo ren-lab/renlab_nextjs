@@ -8,7 +8,7 @@ export default function HomePage() {
         <div className="row">
           <div className="small-12 columns">
             <Image
-              src="/images/ludwig_Ren_Lab.jpg"
+              src="images/ludwig_Ren_Lab.jpg"
               alt="RENLAB"
               width={1200}
               height={400}
