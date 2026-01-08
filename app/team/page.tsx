@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { labMembers } from '@/data/labmembers';
 import { alumni } from '@/data/alumni';
 import Image from 'next/image';
+import teamBingren from '@/public/images/team-bingren.jpg'
 
 export const metadata = {
   title: 'Team',
@@ -19,7 +20,7 @@ export default function TeamPage() {
 
           <h2>Principle Investigator</h2>
           <br />
-          <Image src="/images/team-bingren.jpg" alt="Bing Ren" />
+	  <Image src={teamBingren} alt="Bing Ren" />
           <p>
             <strong>
               <Link href="/bing/">Bing Ren, PhD.</Link>
